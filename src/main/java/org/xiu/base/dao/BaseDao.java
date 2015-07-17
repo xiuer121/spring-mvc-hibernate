@@ -1,4 +1,4 @@
-package com.gxws.cms.dao;
+package org.xiu.base.dao;
 
 
 
@@ -19,8 +19,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.transform.Transformers;
 import org.springframework.orm.hibernate4.HibernateCallback;
 import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
-
-import com.gxws.cms.vo.View;
+import org.xiu.base.vo.View;
 
 
 

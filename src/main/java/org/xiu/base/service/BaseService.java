@@ -2,13 +2,13 @@
  * @功能 对象的服务层
  */
 
-package com.gxws.cms.service;
+package org.xiu.base.service;
 
 import java.io.Serializable;
 import java.util.List;
 
-import com.gxws.cms.dao.BaseDao;
-import com.gxws.cms.vo.View;
+import org.xiu.base.dao.BaseDao;
+import org.xiu.base.vo.View;
 
 abstract public class BaseService<T> {
 

@@ -1,12 +1,11 @@
-package com.gxws.cms.dao;
+package org.xiu.base.dao;
 
 
 
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Repository;
-
-import com.gxws.cms.po.Article;
+import org.xiu.base.po.Article;
 
 
 

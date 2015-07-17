@@ -1,4 +1,4 @@
-package com.gxws.cms.interreptor;
+package org.xiu.base.interreptor;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

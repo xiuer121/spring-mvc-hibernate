@@ -1,4 +1,4 @@
-package com.gxws.cms.vo;
+package org.xiu.base.vo;
 
 import java.util.List;
 

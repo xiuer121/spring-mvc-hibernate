@@ -1,4 +1,4 @@
-package com.gxws.cms.controller;
+package org.xiu.base.controller;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -6,10 +6,9 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import com.gxws.cms.po.ColumnTb;
-import com.gxws.cms.service.ColumnTbService;
-import com.gxws.cms.vo.View;
+import org.xiu.base.po.ColumnTb;
+import org.xiu.base.service.ColumnTbService;
+import org.xiu.base.vo.View;
 
 @Controller
 public class TestController {

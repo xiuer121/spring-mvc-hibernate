@@ -1,4 +1,4 @@
-package com.gxws.cms.po;
+package org.xiu.base.po;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

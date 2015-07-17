@@ -1,4 +1,4 @@
-package com.gxws.cms.po;
+package org.xiu.base.po;
 
 import java.io.Serializable;
 import java.util.Date;

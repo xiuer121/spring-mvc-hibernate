@@ -1,4 +1,4 @@
-package com.gxws.cms.dao;
+package org.xiu.base.dao;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.Collection;
