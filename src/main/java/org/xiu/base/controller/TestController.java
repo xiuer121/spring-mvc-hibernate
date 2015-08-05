@@ -10,16 +10,27 @@ import org.xiu.base.po.ColumnTb;
 import org.xiu.base.service.ColumnTbService;
 import org.xiu.base.vo.View;
 
-@Controller
+@Controller 
+@RequestMapping("/appliaction")
 public class TestController {
 	View<ColumnTb> view = new View<ColumnTb>();
 	@Resource
 	private ColumnTbService columnTbService;
 
 	
-	@RequestMapping("/index")
-	public void getStr(HttpServletRequest req, Model m) {
+	@RequestMapping("")
+	public String getStr(HttpServletRequest req, Model m) {
 		view = columnTbService.getView(view);
 		System.out.println(view.getRecords().size());
+		
+		return "/admin/application";
+	}
+	
+	@RequestMapping("index")
+	public String index(HttpServletRequest req, Model m) {
+		view = columnTbService.getView(view);
+		System.out.println(view.getRecords().size());
+		
+		return "/admin/index";
 	}
 }

@@ -59,7 +59,7 @@
 		<!-- 自动扫描注解方式配置的hibernate类文件 -->
 		<property name="packagesToScan">
 			<list>
-				<value>com.gxws.cms.po</value>
+				<value>org.xiu.base.po</value>
 			</list>
 		</property>
 	</bean>
@@ -99,7 +99,7 @@
 	<aop:config>
 		<aop:pointcut id="transactionPointcut"
 			expression="execution(* 
-		com.gxws.cms.service..*.*(..))" />
+		org.xiu.base.service..*.*(..))" />
 		<aop:advisor pointcut-ref="transactionPointcut"
 			advice-ref="transactionAdvice" />
 	</aop:config>

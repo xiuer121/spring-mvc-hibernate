@@ -51,6 +51,11 @@
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 	<!-- springMVC end -->
+	
+	<!-- 拦截器 -->
+	<listener>
+		<listener-class>org.xiu.base.listener.InitListener</listener-class>
+	</listener>
 
 	<!-- 拦截器start -->
 	<!-- 字符编码拦截器 -->
@@ -73,7 +78,7 @@
 	<!-- 拦截器end -->
 
 
-	<welcome-file-list>
+<!-- 	<welcome-file-list>
 		<welcome-file>/WEB-INF/jsp/login.jsp</welcome-file>
-	</welcome-file-list>
+	</welcome-file-list> -->
 </web-app>
