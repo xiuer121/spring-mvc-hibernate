@@ -190,42 +190,29 @@ abstract public class BaseDao<T> extends HibernateDaoSupport{
 	/**
 	 * @功能 获得分页结果集
 	 */
-	public List<?> getListByPage(final View<?> view){
-		
-		final String hql="from "+this.getEntityName()+" o order by o.id desc";
-		List<?> list = this.getHibernateTemplate().execute(new HibernateCallback() {
-				public Object doInHibernate(Session session) throws HibernateException { 
-					return session.createQuery(hql)
-						   		  .setFirstResult(view.getFirstResult())
-						          .setMaxResults(view.getRecorderPage())
-						          .list(); 
-				} 
-		});
- 
+	public List<?> getListByPage(final View<?> view) {
+
+		final String hql = "from " + this.getEntityName()
+				+ " o order by o.id desc";
+		List<?> list = this.currentSession().createQuery(hql)
+				.setFirstResult(view.getFirstResult())
+				.setMaxResults(view.getRecorderPage()).list();
+
 		return list;
 	}
-	
+
 	/**
 	 * @功能 获得分页结果集（带查询）
 	 */
-	public List<?> getListByPage(final View<?> view,final String where,final Object[] queryParams){
-		
-		final String hql="from "+this.getEntityName()+" o "+where;
+	public List<?> getListByPage(final View<?> view, final String where,
+			final Object[] queryParams) {
 
-		List<?> list = getHibernateTemplate().execute(
-				new HibernateCallback() { 
-					public Object doInHibernate(Session session) throws HibernateException{ 
-						
-						Query query=session.createQuery(hql);
-						setQueryParams(query, queryParams);
-
-						return query.setFirstResult(view.getFirstResult())
-				          			.setMaxResults(view.getRecorderPage())
-				          			.list(); 
-					} 
-				}
-			);  
-			return list;
+		final String hql = "from " + this.getEntityName() + " o " + where;
+		Query query = this.currentSession().createQuery(hql);
+		setQueryParams(query, queryParams);
+		List<?> list = query.setFirstResult(view.getFirstResult())
+				.setMaxResults(view.getRecorderPage()).list();
+		return list;
 	}
 
 	

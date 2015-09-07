@@ -21,8 +21,7 @@ public class TestController {
 	@RequestMapping("")
 	public String getStr(HttpServletRequest req, Model m) {
 		view = columnTbService.getView(view);
-		System.out.println(view.getRecords().size());
-		
+		System.out.println(view.getRecords().size()); 
 		return "/admin/application";
 	}
 	
